@@ -1,217 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Linha de Estudos HTML e CSS - Todos os Desafios</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        main {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        section {
-            background-color: white;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #333;
-        }
-        .desafio {
-            background-color: #e8f5e9;
-            border-left: 5px solid #4CAF50;
-            padding: 15px;
-            margin-top: 10px;
-        }
-        textarea {
-            width: 100%;
-            height: 150px;
-            margin-top: 10px;
-            font-family: monospace;
-            font-size: 14px;
-        }
-        button {
-            margin-top: 10px;
-            padding: 10px 15px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        iframe {
-            width: 100%;
-            height: 300px;
-            border: 1px solid #ccc;
-            margin-top: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Linha de Estudos HTML e CSS - 10 Desafios</title>
+<style>
+    body { font-family: Arial, sans-serif; background-color: #f0f0f0; margin:0; padding:0; }
+    header { background-color: #4CAF50; color:white; padding:20px; text-align:center; }
+    main { max-width: 1000px; margin:20px auto; padding:0 20px; }
+    section { background-color: white; margin-bottom:20px; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+    h2 { color: #333; }
+    .desafio { background-color:#e8f5e9; border-left:5px solid #4CAF50; padding:15px; margin-top:10px; }
+    textarea { width:100%; height:150px; margin-top:10px; font-family: monospace; font-size:14px; }
+    button { margin-top:10px; padding:10px 15px; background-color:#4CAF50; color:white; border:none; cursor:pointer; border-radius:5px; }
+    iframe { width:100%; height:300px; border:1px solid #ccc; margin-top:10px; }
+    .resultado { margin-top:10px; font-weight:bold; }
+    .acerto { color:green; }
+    .erro { color:red; }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Linha de Estudos HTML e CSS</h1>
-        <p>Pratique todos os desafios de HTML e CSS neste site</p>
-    </header>
-    <main>
-        <!-- HTML Fundamentos -->
-        <section>
-            <h2>HTML - Fundamentos</h2>
-            <div class="desafio">
-                <strong>Desafio:</strong> Crie uma página com:
-                <ul>
-                    <li>Um título principal &lt;h1&gt;</li>
-                    <li>Um parágrafo &lt;p&gt; com seu nome e idade</li>
-                    <li>Uma linha horizontal &lt;hr&gt;</li>
-                    <li>Uma quebra de linha &lt;br&gt;</li>
-                </ul>
-            </div>
-            <textarea placeholder="Digite seu código HTML aqui..."></textarea>
-            <button onclick="runHTML(this)">Executar</button>
-            <iframe></iframe>
-        </section>
+<header>
+<h1>Linha de Estudos HTML e CSS</h1>
+<p>Pratique os 10 desafios e veja se acertou!</p>
+</header>
+<main>
 
-        <!-- HTML Listas e Links -->
-        <section>
-            <h2>HTML - Listas e Links</h2>
-            <div class="desafio">
-                <strong>Desafio:</strong> Crie uma lista de 5 livros ou filmes favoritos. Cada item deve ser um link.
-            </div>
-            <textarea placeholder="Digite seu código HTML aqui..."></textarea>
-            <button onclick="runHTML(this)">Executar</button>
-            <iframe></iframe>
-        </section>
+<!-- 1 HTML Fundamentos -->
+<section>
+<h2>HTML - Fundamentos</h2>
+<div class="desafio">
+Crie uma página com:
+<ul>
+<li>Um &lt;h1&gt;</li>
+<li>Um &lt;p&gt; com seu nome e idade</li>
+<li>Uma linha horizontal &lt;hr&gt;</li>
+<li>Uma quebra de linha &lt;br&gt;</li>
+</ul>
+</div>
+<textarea placeholder="Digite seu código HTML aqui..."></textarea>
+<button onclick="runHTML(this)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
 
-        <!-- HTML Imagens e Mídia -->
-        <section>
-            <h2>HTML - Imagens e Mídia</h2>
-            <div class="desafio">
-                <strong>Desafio:</strong> Crie uma página de "meus hobbies" com pelo menos 3 imagens e um vídeo.
-            </div>
-            <textarea placeholder="Digite seu código HTML aqui..."></textarea>
-            <button onclick="runHTML(this)">Executar</button>
-            <iframe></iframe>
-        </section>
+<!-- 2 HTML Listas e Links -->
+<section>
+<h2>HTML - Listas e Links</h2>
+<div class="desafio">
+Crie uma lista &lt;ul&gt; com 5 itens &lt;li&gt;. Cada item deve ser um link.
+</div>
+<textarea placeholder="Digite seu código HTML aqui..."></textarea>
+<button onclick="runHTML(this)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
 
-        <!-- HTML Formulários -->
-        <section>
-            <h2>HTML - Formulários</h2>
-            <div class="desafio">
-                <strong>Desafio:</strong> Crie um formulário de cadastro com:
-                <ul>
-                    <li>Nome, e-mail e senha</li>
-                    <li>Campo de seleção "Curso favorito" com 3 opções</li>
-                    <li>Botão "Enviar"</li>
-                </ul>
-            </div>
-            <textarea placeholder="Digite seu código HTML aqui..."></textarea>
-            <button onclick="runHTML(this)">Executar</button>
-            <iframe></iframe>
-        </section>
+<!-- 3 HTML Imagens e Mídia -->
+<section>
+<h2>HTML - Imagens e Mídia</h2>
+<div class="desafio">
+Crie uma página com pelo menos 3 imagens e um vídeo.
+</div>
+<textarea placeholder="Digite seu código HTML aqui..."></textarea>
+<button onclick="runHTML(this)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
 
-        <!-- HTML Semântica -->
-        <section>
-            <h2>HTML - Estrutura Semântica</h2>
-            <div class="desafio">
-                <strong>Desafio:</strong> Crie um site simples com:
-                <ul>
-                    <li>Cabeçalho com título e menu</li>
-                    <li>Uma seção com um artigo (parágrafo)</li>
-                    <li>Rodapé com informações de contato</li>
-                </ul>
-            </div>
-            <textarea placeholder="Digite seu código HTML aqui..."></textarea>
-            <button onclick="runHTML(this)">Executar</button>
-            <iframe></iframe>
-        </section>
+<!-- 4 HTML Formulários -->
+<section>
+<h2>HTML - Formulários</h2>
+<div class="desafio">
+Crie um formulário de cadastro com:
+<ul>
+<li>Nome, e-mail, senha</li>
+<li>Campo de seleção com 3 opções</li>
+<li>Botão enviar</li>
+</ul>
+</div>
+<textarea placeholder="Digite seu código HTML aqui..."></textarea>
+<button onclick="runHTML(this)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
 
-        <!-- CSS Fundamentos -->
-        <section>
-            <h2>CSS - Fundamentos</h2>
-            <div class="desafio">
-                <strong>Desafio:</strong> Pegue sua página HTML de teste e:
-                <ul>
-                    <li>Mude a cor do fundo</li>
-                    <li>Mude a cor do texto</li>
-                    <li>Escolha uma fonte diferente para títulos e parágrafos</li>
-                </ul>
-            </div>
-            <textarea placeholder="Digite seu código CSS aqui..."></textarea>
-            <button onclick="runHTML(this)">Executar</button>
-            <iframe></iframe>
-        </section>
+<!-- 5 HTML Semântica -->
+<section>
+<h2>HTML - Semântica</h2>
+<div class="desafio">
+Crie um site com:
+<ul>
+<li>Cabeçalho com título e menu</li>
+<li>Uma seção com um artigo (parágrafo)</li>
+<li>Rodapé com informações de contato</li>
+</ul>
+</div>
+<textarea placeholder="Digite seu código HTML aqui..."></textarea>
+<button onclick="runHTML(this)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
 
-        <!-- CSS Box Model -->
-        <section>
-            <h2>CSS - Box Model</h2>
-            <div class="desafio">
-                <strong>Desafio:</strong> Crie 3 caixas (divs) com tamanhos, margens, padding e bordas diferentes.
-            </div>
-            <textarea placeholder="Digite seu código CSS aqui..."></textarea>
-            <button onclick="runHTML(this)">Executar</button>
-            <iframe></iframe>
-        </section>
+<!-- 6 CSS Fundamentos -->
+<section>
+<h2>CSS - Fundamentos</h2>
+<div class="desafio">
+Pegue uma página HTML e:
+<ul>
+<li>Mude a cor do fundo</li>
+<li>Mude a cor do texto</li>
+<li>Escolha fontes diferentes para títulos e parágrafos</li>
+</ul>
+</div>
+<textarea placeholder="Digite seu código CSS aqui..."></textarea>
+<button onclick="runHTML(this)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
 
-        <!-- CSS Posicionamento -->
-        <section>
-            <h2>CSS - Posicionamento e Display</h2>
-            <div class="desafio">
-                <strong>Desafio:</strong> Crie uma página com:
-                <ul>
-                    <li>Menu fixo no topo</li>
-                    <li>Imagem posicionada no canto inferior direito</li>
-                    <li>Parágrafo que se ajusta ao redor da imagem</li>
-                </ul>
-            </div>
-            <textarea placeholder="Digite seu código CSS aqui..."></textarea>
-            <button onclick="runHTML(this)">Executar</button>
-            <iframe></iframe>
-        </section>
+<!-- 7 CSS Box Model -->
+<section>
+<h2>CSS - Box Model</h2>
+<div class="desafio">
+Crie 3 divs com tamanhos, margens, padding e bordas diferentes.
+</div>
+<textarea placeholder="Digite seu código CSS aqui..."></textarea>
+<button onclick="runHTML(this)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
 
-        <!-- CSS Flexbox -->
-        <section>
-            <h2>CSS - Flexbox</h2>
-            <div class="desafio">
-                <strong>Desafio:</strong> Crie um layout com 3 cartões lado a lado usando flexbox, centralizados vertical e horizontalmente.
-            </div>
-            <textarea placeholder="Digite seu código CSS aqui..."></textarea>
-            <button onclick="runHTML(this)">Executar</button>
-            <iframe></iframe>
-        </section>
+<!-- 8 CSS Posicionamento -->
+<section>
+<h2>CSS - Posicionamento</h2>
+<div class="desafio">
+Crie uma página com:
+<ul>
+<li>Menu fixo no topo</li>
+<li>Imagem no canto inferior direito</li>
+<li>Parágrafo que se ajusta ao redor da imagem</li>
+</ul>
+</div>
+<textarea placeholder="Digite seu código CSS aqui..."></textarea>
+<button onclick="runHTML(this)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
 
-        <!-- CSS Animações -->
-        <section>
-            <h2>CSS - Animações e Transições</h2>
-            <div class="desafio">
-                <strong>Desafio:</strong> Crie um botão que muda de cor e aumenta de tamanho quando o mouse passa por cima.
-            </div>
-            <textarea placeholder="Digite seu código CSS aqui..."></textarea>
-            <button onclick="runHTML(this)">Executar</button>
-            <iframe></iframe>
-        </section>
+<!-- 9 CSS Flexbox -->
+<section>
+<h2>CSS - Flexbox</h2>
+<div class="desafio">
+Crie 3 cartões lado a lado usando flexbox, centralizados vertical e horizontalmente.
+</div>
+<textarea placeholder="Digite seu código CSS aqui..."></textarea>
+<button onclick="runHTML(this)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
 
-    </main>
+<!-- 10 CSS Animações -->
+<section>
+<h2>CSS - Animações e Transições</h2>
+<div class="desafio">
+Crie um botão que muda de cor e aumenta de tamanho quando o mouse passa por cima.
+</div>
+<textarea placeholder="Digite seu código CSS aqui..."></textarea>
+<button onclick="runHTML(this)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
 
-    <script>
-        function runHTML(button) {
-            const section = button.parentElement;
-            const code = section.querySelector('textarea').value;
-            const iframe = section.querySelector('iframe');
-            iframe.srcdoc = code;
-        }
-    </script>
+</main>
+
+<script>
+function runHTML(button){
+    const section = button.parentElement;
+    const code = section.querySelector('textarea').value;
+    const iframe = section.querySelector('iframe');
+    const resultado = section.querySelector('.resultado');
+
+    // Atualiza iframe
+    iframe.srcdoc = code;
+
+    // Regras de validação simples
+    const h2Text = section.querySelector('h2').innerText;
+
+    let acertou = false;
+
+    if(h2Text.includes("Fundamentos")) {
+        acertou = code.includes("<h1>") && code.includes("<p>") && code.includes("<hr>") && code.includes("<br>");
+    } else if(h2Text.includes("Listas")) {
+        acertou = code.includes("<ul>") && code.includes("<li>");
+    } else if(h2Text.includes("Imagens")) {
+        acertou = code.includes("<img") && code.includes("<video");
+    } else if(h2Text.includes("Formulários")) {
+        acertou = code.includes("<form") && code.includes("input") && code.includes("select");
+    } else if(h2Text.includes("Semântica")) {
+        acertou = code.includes("<header") && code.includes("<section") && code.includes("<footer");
+    } else if(h2Text.includes("Fundamentos") && h2Text.includes("CSS")) {
+        acertou = code.includes("color") || code.includes("background");
+    } else if(h2Text.includes("Box Model")) {
+        acertou = code.includes("div") && (code.includes("padding") || code.includes("margin") || code.includes("border"));
+    } else if(h2Text.includes("Posicionamento")) {
+        acertou = code.includes("position") || code.includes("float");
+    } else if(h2Text.includes("Flexbox")) {
+        acertou = code.includes("flex");
+    } else if(h2Text.includes("Animações")) {
+        acertou = code.includes("transition") || code.includes("animation");
+    }
+
+    if(acertou){
+        resultado.innerText = "✅ Acertou!";
+        resultado.className = "resultado acerto";
+    } else {
+        resultado.innerText = "❌ Tente novamente!";
+        resultado.className = "resultado erro";
+    }
+}
+</script>
 </body>
 </html>
