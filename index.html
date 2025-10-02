@@ -1,22 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+<meta charset="UTF-8">
+<title>Questões de HTML</title>
 <style>
-*{
-  background-color: black;
-  color: blue;
-}
-h1{
-  font-family: arial; 
-}
-h2{
-  font-family: sans-serif; 
-}
+body { font-family: Arial, sans-serif; background-color: #e3f2fd; padding: 20px; }
+h1 { color: #2196F3; text-align: center; }
+section { background-color: white; margin-bottom: 20px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+textarea { width: 100%; height: 100px; font-family: monospace; margin-top: 10px; }
+button { margin-top: 10px; padding: 10px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+iframe { width: 100%; height: 200px; margin-top: 10px; border:1px solid #ccc; }
+.resultado { font-weight:bold; margin-top: 5px; }
+.acerto { color:green; }
+.erro { color:red; }
+.desafio { background-color:#e8f5e9; border-left:5px solid #2196F3; padding:10px; margin-bottom:10px; }
 </style>
 </head>
 <body>
-<h1>Título</h1>
-<h2>Subtítulo</h2>
-<p>Parágrafo de teste</p>
+<h1>10 Questões de HTML</h1>
+
+<section>
+<div class="desafio">1. Crie um &lt;h1&gt; e um &lt;p&gt; com seu nome.</div>
+<textarea></textarea>
+<button onclick="executarHTML(this, 0)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
+
+<section>
+<div class="desafio">2. Crie uma lista &lt;ul&gt; com 3 itens &lt;li&gt;.</div>
+<textarea></textarea>
+<button onclick="executarHTML(this, 1)">Executar</button>
+<iframe></iframe>
+<div class="resultado"></div>
+</section>
+
+<!-- Continue adicionando até 10 questões -->
+
+<script>
+const checksHTML = [
+  code => code.includes("<h1>") && code.includes("<p>"),
+  code => code.includes("<ul>") && code.includes("<li>"),
+  code => code.includes("<a"),
+  code => code.includes("<img"),
+  code => code.includes("<form") && code.includes("input"),
+  code => code.includes("<header") && code.includes("<section") && code.includes("<footer"),
+  code => code.includes("<table"),
+  code => code.includes("<h2>") && code.includes("<h3>"),
+  code => code.includes("<p>") && code.includes("<br>"),
+  code => code.includes("<h1>") && code.includes("<p>") && code.includes("<ul>") && code.includes("<a")
+];
+
+function executarHTML(button, index){
+  const section = button.parentElement;
+  const code = section.querySelector('textarea').value;
+  const iframe = section.querySelector('iframe');
+  const resultado = section.querySelector('.resultado');
+
+  // Exibe o código no iframe
+  iframe.srcdoc = code;
+
+  // Verifica se acertou
+  if(checksHTML[index](code)){
+    resultado.innerText = "✅ Acertou!";
+    resultado.className = "resultado acerto";
+  } else {
+    resultado.innerText = "❌ Tente novamente!";
+    resultado.className = "resultado erro";
+  }
+}
+</script>
 </body>
 </html>
